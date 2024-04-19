@@ -25,7 +25,7 @@ function convertToNumber(text){
     else if(text==="paper"){
         return 1;
     }
-    else if(text==="scissor"){
+    else if(text==="scissors" || text==="scissor"){
         return 2;
     }
     else{
