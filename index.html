@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPS</title>
+    <link rel="stylesheet" href="./styles.css">
 
 </head>
 <body>
+    <h1>Rock Paper Scissors by Shubhan</h1>
+    <div class="outer_container">
+        <div class="player main_container">
+            <div class="big_box player"></div>
+            <div class="options player">
+                <img src="./resources/SVGs/rock.svg" class="Rock" height="60px" width="auto">
+                <img src="./resources/SVGs/paper.svg" class="Paper" height="60px" width="auto">
+                <img src="./resources/SVGs/scissors.svg" class="Scissors" height="60px" width="auto">
+            </div>
+            <span class="score player"></span>
+        </div>
+        <div class="computer main_container">
+            <div class="big_box computer"></div>
+            <div class="options computer">
+                <img src="./resources/SVGs/rock.svg" alt="Rock" height="60px" width="auto">
+                <img src="./resources/SVGs/paper.svg" alt="Paper" height="60px" width="auto">
+                <img src="./resources/SVGs/scissors.svg" alt="Scissors" height="60px" width="auto">
+            </div>
+            <span class="score computer"></span>
+        </div>
+    </div>
+    <div class="result"></div>
+
     <script src="./rps.js"></script>
 </body>
 </html>
