@@ -80,15 +80,12 @@ let option=document.querySelectorAll(".options.player>img")
 option.forEach((opt)=>{
     opt.addEventListener("click",function optionclick(){
         if(opt.classList.contains("Rock")){
-            bboxPlayer.innerHTML='<img src="./resources/SVGs/rock.svg" height="200px" width="auto"></img>';
             playGame(0);
         }
         else if(opt.classList.contains("Paper")){
-            bboxPlayer.innerHTML='<img src="./resources/SVGs/paper.svg" height="200px" width="auto"></img>';
             playGame(1);
         }
-        else{
-            bboxPlayer.innerHTML='<img src="./resources/SVGs/scissors.svg" height="200px" width="auto"></img>';
+        else{ 
             playGame(2);
         }
     })
@@ -101,6 +98,7 @@ document.body.addEventListener("keypress",(e)=>{
 });
 
 function playGame(playerSelection){
+    bboxPlayer.innerHTML=`<img src="./resources/SVGs/${convertToText(playerSelection)}.svg" height="200px" width="auto"></img>`;
     let computerChoice=getComputerChoice();
     re.textContent="The computer chose : "+convertToText(computerChoice)+"\r\n";
     bboxComp.innerHTML=`<img src="./resources/SVGs/${convertToText(computerChoice)}.svg" height="200px" width="auto"></img>`;
